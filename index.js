@@ -137,10 +137,10 @@ function testRetake(scores){
         let attempt = 0;
         let score = scores[i];
         do{
-            attempt++;
-            score +=10;
             console.log(`Attempt ${attempt}: Score = ${score}`);
-        }while(score<50);
+            score +=10;
+            attempt++;
+        }while(score<=50);
     }
 }
 testRetake([20,30,60,70,50]);
