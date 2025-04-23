@@ -143,4 +143,4 @@ function testRetake(scores){
         }while(score<50);
     }
 }
-testRetake([20,30,50,60,70]);
+testRetake([20,30,60,70,50]);
