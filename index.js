@@ -120,9 +120,10 @@ checkTemperature([15,14,3,30,31]);
 
 function registrationQueue(queue){
     let currentUser = 0;
-    while(currentUser<(queue.length)){
+    while(currentUser<queue.length){
    let currentUser = queue.shift();
    console.log({currentUser});
+   currentUser++
     }
 }
 registrationQueue(["Jacky","Jack","Berissa","Saloi"]);
@@ -130,3 +131,16 @@ registrationQueue(["Jacky","Jack","Berissa","Saloi"]);
 
 //8. Students retake a test until they score 50 or more. Use do...while to simulate attempts, 
 // increasing the score by 10 each time until it's >= 50.
+
+function testRetake(scores){
+    for(let i=0;i<scores.length;i++){
+        let attempt = 0;
+        let score = scores[i];
+        do{
+            attempt++;
+            score +=10;
+            console.log(`Attempt ${attempt}: Score = ${score}`);
+        }while(score<50);
+    }
+}
+testRetake([20,30,50,60,70]);
